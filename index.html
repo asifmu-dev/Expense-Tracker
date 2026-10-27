@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expense Tracker</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<header class="header">
+    <p>Total Expenses</p>
+    <h1>Rs <span id="total">0.00</span></h1>
+  </header>
+ 
+  <main class="container">
+    <form id="expense-form" class="card">
+      <h2>Add Expense</h2>
+ 
+      <label>Title
+        <input type="text" id="title" placeholder="e.g. Lunch" required>
+      </label>
+ 
+      <div class="row">
+        <label>Amount
+          <input type="number" id="amount" placeholder="0.00" min="0.01" step="0.01" required>
+        </label>
+        <label>Date
+          <input type="date" id="date" required>
+        </label>
+      </div>
+ 
+      <label>Category
+        <select id="category" required>
+          <option value="Food">Food</option>
+          <option value="Groceries">Groceries</option>
+          <option value="Transport">Transport</option>
+          <option value="Fuel">Fuel</option>
+          <option value="Bills">Bills</option>
+          <option value="Rent">Rent</option>
+          <option value="Other"> Other</option>
+        </select>
+      </label>
+ 
+      <button type="submit">Add Expense</button>
+    </form>
+ 
+    <section class="card">
+      <h2>Expenses</h2>
+      <ul id="expense-list"></ul>
+      <p id="empty">No expenses yet.</p>
+    </section>
+  </main>
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
